@@ -26,8 +26,8 @@ public class NotificationManager : MonoBehaviour
     public void SendNotification()
     {
         var notification = new AndroidNotification();
-        notification.Title = "Вам повестка";
-        notification.Text = "Вы обязаны явится"
+        notification.Title = "Незабудь сегодня пройти тренеровку";
+        notification.Text = "ТЫ должен сделать это!"
         notification.FireTime = System.DateTime.Now.Addhours(24);
         
         AndroidNotificayionCenter.SendNotificayion(notification, "channel_id")
